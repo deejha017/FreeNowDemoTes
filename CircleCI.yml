@@ -1,0 +1,13 @@
+general:
+    artifacts:
+        - /C:\Users\deejha\Downloads\FREE-NOW-demo.apk
+
+machine:
+    java:
+        version: oraclejdk8
+
+
+test:
+    override:
+        - ./gradlew assemble
+        - cp -r app/build/outputs $CIRCLE_ARTIFACTS
